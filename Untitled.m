@@ -1,0 +1,32 @@
+clc;
+clear all;
+close all;
+x=[1 2 3 2];
+h=[1 2 2];
+n1=length(x);
+n2=length(h);
+N=n1+n2-1;
+t=0:n1-1;
+n=0:N-1;
+z=0:n2-1;
+subplot(3,1,1);
+stem(t,x);
+grid on;
+xlabel('n');
+ylabel('x(n)');
+title('first sequence');
+subplot(3,1,2);
+stem(z,h);
+grid on;
+xlabel('n');
+ylabel('h(n)');
+title('second sequence');
+y=conv(x,h);
+subplot(3,1,3);
+stem(n,y);
+grid on;
+xlabel('n');
+ylabel('y(n)');
+title('linear convolution/aditya,1401106237');
+
+
